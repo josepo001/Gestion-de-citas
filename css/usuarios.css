@@ -1,0 +1,265 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Fondo general */
+    background-image: url(../Img/fondo-home.png);
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir todo */
+}
+
+.header {
+    background-color: #ffffff; /* Color del encabezado */
+    color: #008cff; /* Color del texto */
+    padding: 0.5rem; /* Reduce el espacio dentro del encabezado */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para el encabezado */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Espacia entre el logo y la información del usuario */
+    align-items: center; /* Alinear verticalmente el contenido */
+}
+
+.logo {
+    font-size: 1.2rem; /* Tamaño del texto del logo */
+}
+
+.user-info {
+    text-align: right; /* Alinear texto a la derecha */
+}
+
+.nav-menu {
+    display: flex; /* Permite que los elementos de la barra de navegación estén en línea */
+    justify-content: center; /* Centra los elementos de navegación */
+    margin: 0; /* Eliminar márgenes */
+    align-items: center; /* Alinear verticalmente la barra de navegación */
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex; /* Muestra los elementos en línea */
+    align-items: center; /* Alinear verticalmente los elementos de la lista */
+    padding: 0; /* Eliminar padding por defecto */
+    margin: 0; /* Eliminar margin por defecto */
+}
+
+.nav-menu li {
+    margin: 0 1rem; /* Espaciado horizontal entre los botones */
+}
+
+.nav-menu a {
+    color: #008cff; /* Color del texto de los enlaces */
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* Espaciado dentro de los enlaces */
+    font-weight: bold; /* Negrita para los enlaces */
+    display: inline-block; /* Para aplicar padding correctamente */
+}
+
+#notificaciones-popup {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 200px;
+    background-color: white;
+    border: 1px solid #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 100;
+    display: none; /* Oculto por defecto */
+}
+
+#notificaciones-popup p {
+    margin: 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#notificaciones-popup p:last-child {
+    border-bottom: none;
+}
+/* Estilos de la Barra de Búsqueda */
+.search-container {
+    display: flex;
+    justify-content: center; /* Centra la barra de búsqueda */
+    margin: 20px 0; /* Espacio superior e inferior */
+}
+
+#searchInput {
+    width: 300px; /* Ancho de la barra de búsqueda */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+#searchButton,
+#clearButton {
+    padding: 10px 15px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    margin-left: 10px; /* Espacio entre botones */
+}
+
+/* Estilo para el botón de Buscar (azul) */
+#searchButton {
+    background-color: #007bff; /* Azul */
+    color: white; /* Color del texto */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+/* Estilo para el botón de Limpiar (rojo) */
+#clearButton {
+    background-color: #dc3545; /* Rojo */
+    color: white; /* Color del texto */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+/* Efecto hover */
+#searchButton:hover {
+    background-color: #0056b3; /* Azul oscuro */
+}
+
+#clearButton:hover {
+    background-color: #c82333; /* Rojo oscuro */
+}
+
+/* Estilos de la Tabla */
+.home_content {
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: 20px auto; /* Centra el contenido */
+    padding: 20px; /* Espaciado interno */
+}
+
+.container {
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
+}
+
+.table {
+    width: 100%; /* Ancho completo */
+    border-collapse: collapse; /* Colapsar bordes */
+}
+
+.table-light {
+    background-color: #ffffff; /* Fondo blanco */
+}
+
+.table-dark {
+    background-color: #343a40; /* Fondo oscuro */
+    color: white; /* Color del texto */
+}
+
+.table th, .table td {
+    padding: 12px; /* Espaciado interno */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+.table th {
+    border-bottom: 2px solid #dee2e6; /* Borde inferior */
+}
+
+.table-bordered {
+    border: 1px solid #dee2e6; /* Borde de la tabla */
+}
+
+.table-rounded {
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Línea de separación entre filas */
+.table tr {
+    border-bottom: 1px solid #dee2e6; /* Línea de separación entre filas */
+}
+
+.table tr:last-child {
+    border-bottom: none; /* Elimina la línea en la última fila */
+}
+
+/* Estilos para los botones de acción en la tabla */
+.btn {
+    padding: 6px 12px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    text-decoration: none; /* Eliminar subrayado */
+}
+
+.btn-success {
+    background-color: #28a745; /* Verde */
+    color: white; /* Color del texto */
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Rojo */
+    color: white; /* Color del texto */
+}
+
+.btn-sm {
+    font-size: 14px; /* Tamaño de fuente pequeño */
+}
+
+.btn:hover {
+    opacity: 0.8; /* Efecto hover */
+}
+
+.button-container {
+    text-align: center; /* Centra el botón de agregar usuario */
+    margin-top: 20px; /* Espacio superior */
+}
+
+.btn_agregar {
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: #007bff; /* Azul */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.btn_agregar:hover {
+    background-color: #0056b3; /* Azul oscuro */
+}
+
+/* Estilos de la cuadrícula de estadísticas */
+/* Estilos de la cuadrícula de estadísticas */
+.stats-grid {
+    display: flex; /* Cambiar a flex para centrar */
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en varias líneas */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 20px; /* Espacio entre tarjetas */
+    margin: 0 auto; /* Centra la cuadrícula */
+    max-width: 1200px; /* Ancho máximo de la cuadrícula */
+    padding: 20px; /* Espaciado interno alrededor de la cuadrícula */
+}
+
+/* Estilo para cada tarjeta de estadísticas */
+.stat-card {
+    background-color: #ffffff; /* Fondo blanco */
+    border: 1px solid #dee2e6; /* Borde gris */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 15px; /* Espaciado interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    text-align: center; /* Centrar el texto */
+    transition: transform 0.3s; /* Transición suave al pasar el mouse */
+    flex: 0 1 200px; /* Permitir que las tarjetas se reduzcan a un mínimo de 200px */
+}
+
+.stat-card:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+}
+
+.stat-card h3 {
+    margin: 0; /* Eliminar márgenes */
+    font-size: 1.2rem; /* Tamaño del título */
+    color: #008cff; /* Color del texto */
+}
+
+.stat-card .number {
+    font-size: 2rem; /* Tamaño grande para el número */
+    font-weight: bold; /* Negrita para el número */
+    color: #007bff; /* Color azul */
+}

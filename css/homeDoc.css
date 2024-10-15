@@ -1,0 +1,262 @@
+:root {
+    --color-principal: #008cff; /* Color principal */
+    --color-fondo: #f4f4f4; /* Fondo general */
+    --color-blanco: #ffffff; /* Color blanco */
+    --color-estado:black;
+    --color-gris-claro: #f9f9f9; /* Fondo para citas */
+    --color-gris: #e7f3fe; /* Fondo de alertas */
+    --color-alerta: #31708f; /* Color del texto de alertas */
+    --color-btn-confirmar: green; /* Color del botón de confirmar */
+    --color-btn-completar: blue; /* Color del botón de completar */
+    --color-btn-cancelar: red; /* Color del botón de cancelar */
+    --espacio: 1rem; /* Espaciado estándar */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo);
+}
+
+.header {
+    background-color: var(--color-blanco);
+    color: var(--color-principal);
+    padding: var(--espacio);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem; /* Aumenta el tamaño del texto del logo */
+    font-weight: bold; /* Aumenta la negrita */
+}
+
+.user-info {
+    text-align: right;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin: 0 var(--espacio); /* Espaciado horizontal entre los botones */
+}
+
+.nav-menu a {
+    color: var(--color-principal);
+    text-decoration: none;
+    padding: var(--espacio) 1.5rem; /* Espaciado en los enlaces */
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s; /* Transiciones para efectos */
+}
+
+.nav-menu a:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Efecto hover en enlaces */
+    border-radius: 4px; /* Bordes redondeados en hover */
+}
+/* Estilos para el icono de notificaciones */
+#notificaciones-icon {
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Contador de notificaciones */
+#notificacion-count {
+    position: absolute;
+    top: -5px; /* Ajusta según sea necesario */
+    right: -10px; /* Ajusta según sea necesario */
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 12px;
+}
+
+/* Estilos del popup de notificaciones */
+#notificaciones-popup {
+    position: absolute;
+    top: 40px; /* Ajusta según la altura del icono */
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    width: 250px; /* Ancho del popup */
+    z-index: 1000; /* Asegura que se muestre encima de otros elementos */
+    padding: 10px;
+    display: none; /* Oculto por defecto */
+}
+
+/* Estilo para las notificaciones dentro del popup */
+#notificaciones-popup p {
+    margin: 5px 0;
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+#notificaciones-popup p:last-child {
+    border-bottom: none; /* Quita el borde del último elemento */
+}
+
+/* Estilo para mensaje si no hay notificaciones */
+#notificaciones-popup p {
+    color: #888; /* Color de texto para el mensaje de sin notificaciones */
+    text-align: center;
+}
+
+/* Efecto al pasar el mouse sobre las notificaciones */
+#notificaciones-popup p:hover {
+    background-color: #f0f0f0; /* Cambia el color de fondo al pasar el mouse */
+}
+
+.main-content {
+    padding: var(--espacio);
+    margin: 0 auto;
+    width: 80%;
+    max-width: 800px;
+}
+
+.agenda-container {
+    margin-top: var(--espacio);
+    background: var(--color-blanco);
+    padding: var(--espacio);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cita-fecha {
+    font-weight: bold;
+    margin: var(--espacio) 0;
+    font-size: 1.3rem; /* Aumenta el tamaño de la fuente */
+    color: var(--color-principal);
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+}
+
+.cita-item {
+    padding: var(--espacio);
+    border-radius: 4px;
+    background: var(--color-gris-claro);
+    margin-bottom: var(--espacio);
+    transition: background-color 0.3s;
+}
+
+.cita-item:hover {
+    background: rgba(0, 0, 0, 0.05); /* Efecto hover para cita */
+}
+
+.cita-detalles {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cita-info {
+    flex: 1;
+}
+
+.cita-estado {
+    text-align: right;
+}
+
+.estado-badge {
+    display: inline-block; /* Comportamiento en bloque en línea */
+    padding: 0.5rem 1rem; /* Espaciado interno */
+    border-radius: 12px; /* Bordes redondeados */
+    font-weight: bold; /* Negrita para destacar el texto */
+    color: var(--color-estado); /* Color del texto */
+    text-transform: capitalize; /* Capitaliza la primera letra */
+    margin-top: 0.5rem; /* Espacio superior */
+}
+
+
+
+.btn {
+    padding: 0.5rem 1rem; /* Ajustado para mayor uniformidad */
+    border: none;
+    border-radius: 4px; /* Bordes más redondeados */
+    color: var(--color-blanco);
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin: 0.2rem; /* Espacio entre los botones */
+    transition: background-color 0.3s; /* Transiciones para botones */
+}
+
+.btn-confirmar {
+    background-color: var(--color-btn-confirmar);
+}
+
+.btn-completar {
+    background-color: var(--color-btn-completar);
+}
+
+.btn-cancelar {
+    background-color: var(--color-btn-cancelar);
+}
+
+.btn:hover {
+    filter: brightness(0.9); /* Oscurece el botón al pasar el mouse */
+}
+
+.alert {
+    padding: var(--espacio);
+    margin: var(--espacio) 0;
+    border-radius: 4px;
+    background-color: var(--color-gris);
+    color: var(--color-alerta);
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+    }
+
+    .nav-menu li {
+        margin: var(--espacio) 0; /* Espaciado vertical entre botones en menú */
+    }
+
+    .main-content {
+        width: 95%; /* Ampliar a 95% en pantallas pequeñas */
+    }
+
+    .agenda-container {
+        padding: var(--espacio); /* Menos espaciado en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.2rem; /* Reduce el tamaño del logo */
+    }
+
+    .header {
+        padding: var(--espacio); /* Más espaciado en el encabezado */
+    }
+
+    .btn {
+        width: 100%; /* Botones ocupan el 100% del ancho */
+        margin-bottom: 0.5rem; /* Espacio entre botones */
+    }
+}

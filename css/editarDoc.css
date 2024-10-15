@@ -1,0 +1,102 @@
+/* Estilos generales del formulario */
+.profile-form {
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centra el formulario en la página */
+    padding: 20px; /* Espaciado interno del formulario */
+    background: #fff; /* Fondo blanco */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo de las etiquetas */
+.profile-form label {
+    font-weight: bold; /* Texto en negrita */
+    margin-bottom: 5px; /* Espaciado inferior */
+    display: block; /* Para que ocupe toda la línea */
+}
+
+/* Estilo de los campos de entrada */
+.form-control {
+    width: 100%; /* Ancho completo */
+    padding: 5px; /* Espaciado interno reducido */
+    border: 1px solid #ddd; /* Borde suave */
+    border-radius: 4px; /* Esquinas redondeadas */
+    transition: border 0.3s; /* Transición suave en el borde */
+}
+
+.form-control:focus {
+    border-color: #3498db; /* Color del borde en foco */
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Sombra en foco */
+}
+
+/* Estilo para el menú desplegable */
+.form-select {
+    width: 100%; /* Ancho completo */
+    padding: 5px; /* Espaciado interno reducido */
+    border: 1px solid #ddd; /* Borde suave */
+    border-radius: 4px; /* Esquinas redondeadas */
+    background: #f9f9f9; /* Fondo más claro */
+    transition: border 0.3s; /* Transición suave en el borde */
+}
+
+.form-select:focus {
+    border-color: #3498db; /* Color del borde en foco */
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Sombra en foco */
+}
+
+/* Estilo de los botones */
+.btn {
+    width: 48%; /* Ancho de ambos botones */
+    padding: 10px; /* Espaciado */
+    border-radius: 4px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background 0.3s; /* Transición suave al cambiar el fondo */
+}
+
+/* Estilo del botón actualizar */
+.btn-actualizar {
+    background: #28a745; /* Color verde */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+}
+
+.btn-actualizar:hover {
+    background: #218838; /* Color más oscuro al pasar el ratón */
+}
+
+/* Estilo del botón cancelar */
+/* Estilo del botón cancelar */
+.btn-cancelar {
+    background: #e74c3c; /* Color rojo */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    margin-left: 10px; /* Espaciado a la izquierda */
+    text-decoration: none; /* Quitar el subrayado */
+    display: inline-flex; /* Usar flexbox para centrar el texto */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: 100%; /* Asegura que el botón tenga altura completa */
+    width: 48%; /* Asegura que el botón tenga un ancho adecuado */
+}
+
+.btn-cancelar:hover {
+    background: #c0392b; /* Color más oscuro al pasar el ratón */
+}
+
+
+/* Estilo del contenedor de los botones */
+.button-container {
+    display: flex; /* Usar flexbox para alinear los botones */
+    justify-content: center; /* Centrar los botones */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+/* Espaciado entre los grupos de campos */
+.form-group {
+    margin-bottom: 15px; /* Espaciado inferior entre campos */
+}
+
+/* Estilo del contenedor del formulario */
+.text-center {
+    text-align: center; /* Centra el texto */
+}

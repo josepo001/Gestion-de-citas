@@ -1,0 +1,206 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Fondo general */
+    background-image: url(../Img/fondo-home.png);
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir todo */
+}
+
+.header {
+    background-color: #ffffff; /* Color del encabezado */
+    color: #008cff; /* Color del texto */
+    padding: 0.5rem; /* Reduce el espacio dentro del encabezado */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para el encabezado */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Espacia entre el logo y la información del usuario */
+    align-items: center; /* Alinear verticalmente el contenido */
+}
+
+.logo {
+    font-size: 1.2rem; /* Tamaño del texto del logo */
+}
+
+.user-info {
+    text-align: right; /* Alinear texto a la derecha */
+}
+
+.nav-menu {
+    display: flex; /* Permite que los elementos de la barra de navegación estén en línea */
+    justify-content: center; /* Centra los elementos de navegación */
+    margin: 0; /* Eliminar márgenes */
+    align-items: center; /* Alinear verticalmente la barra de navegación */
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex; /* Muestra los elementos en línea */
+    align-items: center; /* Alinear verticalmente los elementos de la lista */
+    padding: 0; /* Eliminar padding por defecto */
+    margin: 0; /* Eliminar margin por defecto */
+}
+
+.nav-menu li {
+    margin: 0 1rem; /* Espaciado horizontal entre los botones */
+}
+
+.nav-menu a {
+    color: #008cff; /* Color del texto de los enlaces */
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* Espaciado dentro de los enlaces */
+    font-weight: bold; /* Negrita para los enlaces */
+    display: inline-block; /* Para aplicar padding correctamente */
+}
+
+#notificaciones-popup {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 200px;
+    background-color: white;
+    border: 1px solid #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 100;
+    display: none; /* Oculto por defecto */
+}
+
+#notificaciones-popup p {
+    margin: 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#notificaciones-popup p:last-child {
+    border-bottom: none;
+}
+/* Contenido principal */
+.main-content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Formulario */
+.form-container {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+select,
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical; /* Permitir cambiar el tamaño solo verticalmente */
+}
+
+.btn-agendar {
+    background-color: #28a745; /* Botón verde */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.btn-agendar:hover {
+    background-color: #218838; /* Oscurecer al pasar el ratón */
+}
+
+/* Estilos para los horarios */
+.horarios-disponibles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Añadir espacio consistente entre los horarios */
+    margin-top: 20px;
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
+}
+
+.horario {
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px; /* Ancho fijo para todos los horarios */
+    height: 40px; /* Altura fija para todos los horarios */
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box; /* Asegura que el padding no aumente el tamaño total del elemento */
+}
+
+.horario input[type="radio"] {
+    margin-right: 5px;
+}
+
+.horario label {
+    margin: 0;
+    font-size: 14px;
+    color: black;
+}
+
+.horario input[type="radio"]:checked + label {
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Espacio entre los horarios */
+.horario + .horario {
+    margin-left: 0px; /* Elimina margen extra entre los horarios */
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 600px) {
+    .horarios-disponibles {
+        flex-direction: column;
+        gap: 15px; /* Mayor espacio entre las filas en móviles */
+    }
+    
+    .horario {
+        width: 100%; /* Que el horario ocupe todo el ancho disponible en pantallas pequeñas */
+    }
+}
+
+.error {
+    border: 2px solid red; /* Resalta los campos vacíos con un borde rojo */
+}
+
+
+/* Estilo para la información del doctor */
+.doctor-info {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.doctor-info.visible {
+    display: block;
+}

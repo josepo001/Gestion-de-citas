@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Fondo general */
+    background-image: url(../Img/fondo-home.png);
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir todo */
+}
+
+.header {
+    background-color: #ffffff; /* Color del encabezado */
+    color: #008cff; /* Color del texto */
+    padding: 0.5rem; /* Reduce el espacio dentro del encabezado */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para el encabezado */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Espacia entre el logo y la información del usuario */
+    align-items: center; /* Alinear verticalmente el contenido */
+}
+
+.logo {
+    font-size: 1.2rem; /* Tamaño del texto del logo */
+}
+
+.user-info {
+    text-align: right; /* Alinear texto a la derecha */
+}
+
+.nav-menu {
+    display: flex; /* Permite que los elementos de la barra de navegación estén en línea */
+    justify-content: center; /* Centra los elementos de navegación */
+    margin: 0; /* Eliminar márgenes */
+    align-items: center; /* Alinear verticalmente la barra de navegación */
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex; /* Muestra los elementos en línea */
+    align-items: center; /* Alinear verticalmente los elementos de la lista */
+    padding: 0; /* Eliminar padding por defecto */
+    margin: 0; /* Eliminar margin por defecto */
+}
+
+.nav-menu li {
+    margin: 0 1rem; /* Espaciado horizontal entre los botones */
+}
+
+.nav-menu a {
+    color: #008cff; /* Color del texto de los enlaces */
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* Espaciado dentro de los enlaces */
+    font-weight: bold; /* Negrita para los enlaces */
+    display: inline-block; /* Para aplicar padding correctamente */
+}
+
+#notificaciones-popup {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 200px;
+    background-color: white;
+    border: 1px solid #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 100;
+    display: none; /* Oculto por defecto */
+}
+
+#notificaciones-popup p {
+    margin: 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#notificaciones-popup p:last-child {
+    border-bottom: none;
+}
+/*Formulario*/
+/* Estilos para el contenedor principal del formulario de edición */
+.main-content {
+    background-color: #e9ecef; /* Fondo gris más claro */
+    padding: 2.5rem; /* Espaciado interno más amplio */
+    border-radius: 12px; /* Esquinas redondeadas más suaves */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra más prominente */
+    max-width: 600px; /* Ancho máximo reducido */
+    margin: 2rem auto; /* Centrar en la página */
+}
+
+/* Estilos para el contenedor del perfil */
+.profile-container {
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 2rem; /* Espaciado interno */
+    border-radius: 12px; /* Esquinas redondeadas más suaves */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilos para el formulario del perfil */
+.profile-form {
+    display: flex; /* Usar flexbox para alinear elementos */
+    flex-direction: column; /* Colocar elementos en columna */
+}
+
+/* Estilos para los grupos de formularios */
+.form-group {
+    margin-bottom: 2rem; /* Espacio entre grupos más amplio */
+}
+
+/* Estilos para las etiquetas */
+.form-group label {
+    font-weight: bold; /* Negrita para las etiquetas */
+    color: #495057; /* Color gris oscuro para el texto */
+    margin-bottom: 0.5rem; /* Espacio debajo de la etiqueta */
+}
+
+/* Estilos para los campos de entrada */
+.form-group input {
+    width: 100%; /* Ancho completo */
+    padding: 0.85rem; /* Espaciado interno más amplio */
+    border: 1px solid #ced4da; /* Borde gris claro */
+    border-radius: 6px; /* Esquinas redondeadas más suaves */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transición suave para el borde */
+}
+
+/* Cambiar el color del borde al enfocar */
+.form-group input:focus {
+    border-color: #007bff; /* Borde azul al enfocar */
+    outline: none; /* Sin contorno */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra azul al enfocar */
+}
+
+/* Estilos para el botón de actualizar */
+.btn-actualizar {
+    background-color: #007bff; /* Color azul */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 0.85rem 1.5rem; /* Espacio interno más amplio */
+    border-radius: 6px; /* Esquinas redondeadas más suaves */
+    cursor: pointer; /* Cambia el cursor */
+    font-size: 1rem; /* Tamaño de fuente */
+    transition: background-color 0.3s, transform 0.3s; /* Transición suave para el fondo */
+}
+
+/* Cambiar el color de fondo del botón al pasar el ratón */
+.btn-actualizar:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el ratón */
+    transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+}
+
+/* Estilos para el mensaje de retroalimentación */
+.mensaje {
+    background-color: #dc3545; /* Fondo rojo para mensajes de error */
+    color: white; /* Texto blanco */
+    padding: 0.75rem; /* Espacio interno */
+    border-radius: 6px; /* Esquinas redondeadas más suaves */
+    margin-bottom: 2rem; /* Espacio debajo del mensaje */
+    text-align: center; /* Centrar texto */
+    font-weight: bold; /* Negrita para el mensaje */
+}

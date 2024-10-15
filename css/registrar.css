@@ -1,0 +1,86 @@
+body {
+    background-color: #f8f9fa; /* Color de fondo claro */
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.position-absolute {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Color gris */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268; /* Color gris oscuro al pasar el mouse */
+}
+
+form {
+    background-color: #343a40; /* Fondo oscuro para el formulario */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 0 auto; /* Centrar el formulario */
+}
+
+h1 {
+    color: black; /* Color blanco para el título */
+    margin-bottom: 20px;
+}
+
+label {
+    color: #ffffff; /* Color blanco para las etiquetas */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ced4da; /* Color gris claro */
+    border-radius: 5px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: #80bdff; /* Color azul al enfocar */
+    outline: none; /* Sin borde de enfoque */
+}
+
+button[type="submit"] {
+    background-color: #28a745; /* Color verde para el botón de registro */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838; /* Color verde oscuro al pasar el mouse */
+}
+
+.error-message {
+    color: #dc3545; /* Color rojo para el mensaje de error */
+    text-align: center;
+    margin-top: 20px;
+}

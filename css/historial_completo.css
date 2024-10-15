@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Fondo general */
+    background-image: url(../Img/fondo-home.png);
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir todo */
+}
+
+.header {
+    background-color: #ffffff; /* Color del encabezado */
+    color: #008cff; /* Color del texto */
+    padding: 0.5rem; /* Reduce el espacio dentro del encabezado */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para el encabezado */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Espacia entre el logo y la información del usuario */
+    align-items: center; /* Alinear verticalmente el contenido */
+}
+
+.logo {
+    font-size: 1.2rem; /* Tamaño del texto del logo */
+}
+
+.user-info {
+    text-align: right; /* Alinear texto a la derecha */
+}
+
+.nav-menu {
+    display: flex; /* Permite que los elementos de la barra de navegación estén en línea */
+    justify-content: center; /* Centra los elementos de navegación */
+    margin: 0; /* Eliminar márgenes */
+    align-items: center; /* Alinear verticalmente la barra de navegación */
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex; /* Muestra los elementos en línea */
+    align-items: center; /* Alinear verticalmente los elementos de la lista */
+    padding: 0; /* Eliminar padding por defecto */
+    margin: 0; /* Eliminar margin por defecto */
+}
+
+.nav-menu li {
+    margin: 0 1rem; /* Espaciado horizontal entre los botones */
+}
+
+.nav-menu a {
+    color: #008cff; /* Color del texto de los enlaces */
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* Espaciado dentro de los enlaces */
+    font-weight: bold; /* Negrita para los enlaces */
+    display: inline-block; /* Para aplicar padding correctamente */
+}
+
+#notificaciones-popup {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 200px;
+    background-color: white;
+    border: 1px solid #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 100;
+    display: none; /* Oculto por defecto */
+}
+
+#notificaciones-popup p {
+    margin: 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#notificaciones-popup p:last-child {
+    border-bottom: none;
+}
+/*content*/
+.table-container {
+    width: 80%; /* Ajusta el ancho del contenedor al 80% del contenedor principal */
+    max-width: 70px; /* Establece un ancho máximo más pequeño para el contenedor */
+    margin: 20px auto; /* Centra el contenedor */
+    background-color: white; /* Color de fondo para el contenedor */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para el contenedor */
+    padding: 20px; /* Espaciado interno para que no esté tan pegado al borde */
+}
+
+table {
+    width: 70%; /* Ajusta el ancho de la tabla al 100% del contenedor */
+    border-collapse: collapse; /* Elimina el espacio entre las celdas */
+    background-color: white; /* Color de fondo de la tabla */
+    margin: 0 auto; /* Centra la tabla dentro del contenedor */
+}
+
+thead {
+    background-color: #008cff; /* Color de fondo del encabezado */
+    color: white; /* Color del texto del encabezado */
+}
+
+th, td {
+    padding: 8px; /* Espaciado dentro de las celdas */
+    text-align: left; /* Alinear texto a la izquierda */
+    border-bottom: 1px solid #ddd; /* Línea divisoria entre filas */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Color de fondo al pasar el ratón por encima de la fila */
+}
+
+.no-citas {
+    text-align: center; /* Centra el texto de mensaje */
+    margin-top: 20px; /* Espacio encima del mensaje */
+    font-size: 1.2rem; /* Tamaño de fuente del mensaje */
+    color: #666; /* Color del texto del mensaje */
+}

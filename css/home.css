@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Fondo general */
+    background-image: url(../Img/fondo-home.png);
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir todo */
+}
+
+.header {
+    background-color: #ffffff; /* Color del encabezado */
+    color: #008cff; /* Color del texto */
+    padding: 0.5rem; /* Reduce el espacio dentro del encabezado */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para el encabezado */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Espacia entre el logo y la información del usuario */
+    align-items: center; /* Alinear verticalmente el contenido */
+}
+
+.logo {
+    font-size: 1.2rem; /* Tamaño del texto del logo */
+}
+
+.user-info {
+    text-align: right; /* Alinear texto a la derecha */
+}
+
+.nav-menu {
+    display: flex; /* Permite que los elementos de la barra de navegación estén en línea */
+    justify-content: center; /* Centra los elementos de navegación */
+    margin: 0; /* Eliminar márgenes */
+    align-items: center; /* Alinear verticalmente la barra de navegación */
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex; /* Muestra los elementos en línea */
+    align-items: center; /* Alinear verticalmente los elementos de la lista */
+    padding: 0; /* Eliminar padding por defecto */
+    margin: 0; /* Eliminar margin por defecto */
+}
+
+.nav-menu li {
+    margin: 0 1rem; /* Espaciado horizontal entre los botones */
+}
+
+.nav-menu a {
+    color: #008cff; /* Color del texto de los enlaces */
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* Espaciado dentro de los enlaces */
+    font-weight: bold; /* Negrita para los enlaces */
+    display: inline-block; /* Para aplicar padding correctamente */
+}
+
+#notificaciones-popup {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 200px;
+    background-color: white;
+    border: 1px solid #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 100;
+    display: none; /* Oculto por defecto */
+}
+
+#notificaciones-popup p {
+    margin: 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#notificaciones-popup p:last-child {
+    border-bottom: none;
+}
+
+.main-content {
+    padding: 2rem; /* Espacio en el contenido principal */
+    margin: 0 auto; /* Centrar el contenido */
+    display: flex; /* Cambiar a Flexbox */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+    justify-content: space-between; /* Espaciado entre los cuadros */
+}
+
+.content-box {
+    background-color: white; /* Fondo blanco para las cajas de contenido */
+    padding: 1.5rem; /* Espacio dentro de las cajas */
+    margin: 1rem; /* Margen entre las cajas */
+    border-radius: 5px; /* Esquinas redondeadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    flex: 1 1 calc(30% - 2rem); /* Permitir que los cuadros crezcan y se reduzcan */
+    max-width: calc(30% - 2rem); /* Ancho máximo de los cuadros */
+}
+
+/* Estilos para el botón "Ver más" */
+.btn-toggle {
+    display: inline-block; /* Permite padding */
+    background-color: #008cff; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 0.5rem 1rem; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center; /* Centrar texto */
+    text-decoration: none; /* Sin subrayado */
+    transition: background-color 0.3s; /* Transición para el efecto hover */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.btn-toggle:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el ratón */
+}
+
+/* Estilos para el botón "Anular hora" */
+.btn-cancel {
+    padding: 0.5rem 1rem; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    color: white; /* Color del texto */
+    background-color: red; /* Color de fondo */
+    display: none; /* Oculto inicialmente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición para el efecto hover */
+    text-decoration: none; /* Quitar subrayado */
+}
+
+.btn-cancel:hover {
+    background-color: #cc0000; /* Efecto hover para "Anular hora" */
+}
+
+/* Estilos para el botón "Reservar hora" */
+.reserve-btn {
+    display: inline-block; /* Permite padding */
+    background-color: #008cff; /* Color de fondo verde */
+    color: white; /* Color del texto */
+    padding: 0.5rem 1rem; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center; /* Centrar texto */
+    text-decoration: none; /* Sin subrayado */
+    transition: background-color 0.3s; /* Transición para el efecto hover */
+}
+
+.reserve-btn:hover {
+    background-color: #0062ff; /* Color de fondo al pasar el ratón */
+}
+
+/* Estilos para la alerta */
+.alert {
+    padding: 15px; /* Espaciado interno de la alerta */
+    border: 1px solid #4CAF50; /* Borde verde */
+    background-color: #dff0d8; /* Fondo verde claro */
+    color: #3c763d; /* Color del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    margin: 10px 0; /* Margen entre la alerta y otros elementos */
+    text-align: center; /* Centramos el texto en la alerta */
+}
+
+/* Estilos del título de sección */
+.section-title {
+    margin: 1rem 0; /* Espaciado arriba y abajo de los títulos de sección */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .main-content {
+        width: 90%; /* Ancho del contenido principal en pantallas pequeñas */
+    }
+
+    .nav-menu {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    }
+
+    .nav-menu li {
+        margin: 0.5rem 0; /* Espaciado vertical entre botones */
+    }
+
+    .header-content {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: flex-start; /* Alinear a la izquierda */
+    }
+}

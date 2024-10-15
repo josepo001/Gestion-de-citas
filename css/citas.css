@@ -1,0 +1,195 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Fondo general */
+    background-image: url(../Img/fondo-home.png);
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir todo */
+}
+
+.header {
+    background-color: #ffffff; /* Color del encabezado */
+    color: #008cff; /* Color del texto */
+    padding: 0.5rem; /* Reduce el espacio dentro del encabezado */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para el encabezado */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Espacia entre el logo y la información del usuario */
+    align-items: center; /* Alinear verticalmente el contenido */
+}
+
+.logo {
+    font-size: 1.2rem; /* Tamaño del texto del logo */
+}
+
+.user-info {
+    text-align: right; /* Alinear texto a la derecha */
+}
+
+.nav-menu {
+    display: flex; /* Permite que los elementos de la barra de navegación estén en línea */
+    justify-content: center; /* Centra los elementos de navegación */
+    margin: 0; /* Eliminar márgenes */
+    align-items: center; /* Alinear verticalmente la barra de navegación */
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex; /* Muestra los elementos en línea */
+    align-items: center; /* Alinear verticalmente los elementos de la lista */
+    padding: 0; /* Eliminar padding por defecto */
+    margin: 0; /* Eliminar margin por defecto */
+}
+
+.nav-menu li {
+    margin: 0 1rem; /* Espaciado horizontal entre los botones */
+}
+
+.nav-menu a {
+    color: #008cff; /* Color del texto de los enlaces */
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* Espaciado dentro de los enlaces */
+    font-weight: bold; /* Negrita para los enlaces */
+    display: inline-block; /* Para aplicar padding correctamente */
+}
+
+#notificaciones-popup {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 200px;
+    background-color: white;
+    border: 1px solid #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 100;
+    display: none; /* Oculto por defecto */
+}
+
+#notificaciones-popup p {
+    margin: 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#notificaciones-popup p:last-child {
+    border-bottom: none;
+}
+/* Estilo adicional para el botón "Reservar hora" en el header, si es necesario */
+.reserve-btn {
+    display: inline-block; /* Permite padding */
+    background-color: #008cff; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 0.3rem 0.5rem; /* Espaciado interno reducido */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center; /* Centrar texto */
+    text-decoration: none; /* Sin subrayado */
+    transition: background-color 0.3s; /* Transición para el efecto hover */
+}
+
+.reserve-btn:hover {
+    background-color: #0062ff; /* Color de fondo al pasar el ratón */
+}
+
+/* Contenedor de citas */
+.citas-container {
+    padding: 20px;
+    width: 50%;
+    align-items: center;
+    margin: 0 auto; /* Centra el contenedor en la página */
+}
+
+/* Tarjeta de cita */
+.cita-card {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Encabezado de la cita */
+.cita-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Fecha de la cita */
+.cita-fecha {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Estado de la cita */
+.cita-estado {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+/* Colores para los estados de la cita */
+.estado-pendiente {
+    background: #f1c40f;
+    color: white;
+}
+
+.estado-confirmada {
+    background: #3498db;
+    color: white;
+}
+
+.estado-completada {
+    background: #2ecc71;
+    color: white;
+}
+
+.estado-cancelada {
+    background: #e74c3c;
+    color: white;
+}
+
+/* Información de la cita */
+.cita-info {
+    margin-top: 10px;
+}
+
+.cita-info p {
+    margin: 5px 0;
+    color: #34495e;
+}
+
+/* Botón para cancelar la cita */
+.btn-cancelar {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-cancelar:hover {
+    background: #c0392b; /* Color de fondo al pasar el ratón */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .citas-container {
+        width: 90%; /* Ancho del contenedor de citas en pantallas pequeñas */
+    }
+
+    .header-content {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: flex-start; /* Alinear a la izquierda */
+    }
+
+    .nav-menu li {
+        margin: 0.5rem 0; /* Espaciado vertical entre botones */
+    }
+}

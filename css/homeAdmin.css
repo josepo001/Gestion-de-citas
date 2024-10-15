@@ -1,0 +1,157 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Fondo general */
+}
+
+/* Header */
+.header {
+    background-color: #ffffff; /* Color del encabezado */
+    color: #008cff; /* Color del texto */
+    padding: 0.5rem; /* Reduce el espacio dentro del encabezado */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para el encabezado */
+    margin-bottom: 2rem; /* Espacio debajo del encabezado */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Espacia entre el logo y la información del usuario */
+    align-items: center; /* Alinear verticalmente el contenido */
+}
+
+.logo h2 {
+    font-size: 1.5rem; /* Tamaño del texto del logo */
+    color: #008cff; /* Color del texto del logo */
+    margin: 0; /* Sin margen */
+}
+
+/* Menú de navegación */
+.nav-menu {
+    display: flex; /* Permite que los elementos de la barra de navegación estén en línea */
+    justify-content: center; /* Centra los elementos de navegación */
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex; /* Muestra los elementos en línea */
+    padding: 0; /* Eliminar padding por defecto */
+    margin: 0; /* Eliminar margin por defecto */
+}
+
+.nav-menu li {
+    margin: 0 1rem; /* Espaciado horizontal entre los botones */
+}
+
+.nav-menu a {
+    color: #008cff; /* Color del texto de los enlaces */
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* Espaciado dentro de los enlaces */
+    font-weight: bold; /* Negrita para los enlaces */
+    display: inline-block; /* Para aplicar padding correctamente */
+}
+
+.nav-menu a:hover {
+    color: #0056b3; /* Color de texto al pasar el ratón */
+}
+
+/* Información del usuario */
+.user-info {
+    display: flex;
+    align-items: center;
+    color: #008cff; /* Color del texto */
+    text-align: right; /* Alinear texto a la derecha */
+}
+
+.user-info span {
+    font-weight: bold; /* Texto del nombre en negrita */
+    margin-left: 8px; /* Espacio entre el icono y el nombre */
+}
+
+.user-info small {
+    display: block;
+    font-size: 0.8rem; /* Tamaño del tipo de usuario */
+    color: #666; /* Color para el tipo de usuario */
+}
+
+/* Ajuste del icono de usuario */
+.user-info i {
+    font-size: 1.5rem; /* Tamaño del icono */
+}
+
+/* Resets para padding y margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*tablas*/
+
+/* Estilos de la tabla */
+/* Contenedor de la tabla */
+.table-container {
+    display: flex; /* Usa flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    margin-top: 1rem; /* Espacio arriba del contenedor */
+}
+
+/* Estilo de la tabla */
+table {
+    width: 80%; /* Mantiene el ancho de la tabla */
+    max-width: 1000px; /* Ancho máximo para la tabla */
+    border-collapse: collapse; /* Colapsar bordes */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Para que los bordes redondeados se apliquen */
+}
+
+
+th, td {
+    padding: 1rem; /* Espacio dentro de celdas */
+    text-align: left; /* Alinear texto a la izquierda */
+    border-bottom: 1px solid #dddddd; /* Línea inferior en las celdas */
+}
+
+th {
+    background-color: #008cff; /* Fondo azul para encabezados */
+    color: white; /* Color del texto de encabezados */
+    font-weight: bold; /* Negrita para encabezados */
+}
+
+td {
+    background-color: #ffffff; /* Fondo blanco para celdas */
+}
+
+td:hover {
+    background-color: #f1f1f1; /* Fondo al pasar el ratón por encima de celdas */
+}
+
+/* Estilos para los badges */
+.badge {
+    padding: 0.3rem 0.5rem; /* Espacio interno para badges */
+    border-radius: 5px; /* Bordes redondeados */
+    color: rgb(0, 0, 0); /* Color del texto */
+    font-weight: bold; /* Negrita para el texto de badges */
+}
+
+.badge.pendiente {
+    background-color: orange; /* Color para citas pendientes */
+}
+
+.badge.completada {
+    background-color: blue; /* Color para citas completadas */
+}
+
+.badge.cancelada {
+    background-color: red; /* Color para citas canceladas */
+}
+
+/* Estilo del título de la tabla */
+.content-box h2 {
+    text-align: center; /* Centra el título de la tabla */
+    margin-bottom: 1rem; /* Espacio debajo del título */
+    font-size: 1.5rem; /* Tamaño del texto del título */
+    color: #333; /* Color del texto del título */
+}
